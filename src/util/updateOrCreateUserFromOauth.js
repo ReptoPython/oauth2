@@ -10,6 +10,8 @@ export const updateOrCreateUserFromOauth = async ({ oauthUserInfo }) => {
     const db = getDbConnection('react-auth-db');
     const existingUser = await db.collection('users').findOne({ email });
 
+    //console.log('Current user - ', existingUser)
+
     if (existingUser) {
         const result = await db.collection('users').findOneAndUpdate( 
             { email },
