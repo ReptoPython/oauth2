@@ -47,7 +47,7 @@ export const signUpRoute = {
                 subject: 'Please verify your email',
                 text: `
                     Thanks for signing up! To verify your email, click here:
-                    https://mighty-harbor-91828.herokuapp.com/verify-email/${verificationString}
+                    http://127.0.0.1:3000/verify-email/${verificationString}
                 `,
             });
         } catch (e) {

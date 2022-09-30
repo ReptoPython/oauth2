@@ -17,7 +17,7 @@ export const googleOauthCallbackRoute = {
             process.env.JWT_SECRET,
             (err, token) => {
                 if (err) return res.sendStatus(500);
-                res.redirect(`https://mighty-harbor-91828.herokuapp.com/login?token=${token}`)
+                res.redirect(`http://127.0.0.1:3000/login?token=${token}`)
             }
         );
     }
